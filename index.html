@@ -9,20 +9,28 @@
 			background: #120000;
 		}
 		.container {
-			background: #FFF5F7;
-			
-			padding: 1em;
-			border: 2px solid red;
-			border-radius: 0.5em;
-			margin: 1em;
-
-			aspect-ratio: 16 / 10;
-			max-width: 50%;
-
 			display: flex;
 			align-items: center;
 			justify-content: center;
     	}
+		.smartboard {
+			border: 0.5em solid #333132;
+			border-radius: 0.5em;
+
+			aspect-ratio: 16 / 10;
+			max-width: 60%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.screen {
+			background: #FFF5F7;
+			padding: 1em;
+			border: 2px solid #F2EDEE;
+			border-radius: 0.5em;
+			margin: 0em;
+		}
 		h1 {
 			color: #120000;
 		}
@@ -33,8 +41,14 @@
 	
 	<body>
 		<div class="container">
-     		<h1>This is a heading</h1>
-      		<p>This is a paragraph</p>
+			<div class="smartboard">
+				<div class="screen">
+					<div>
+     					<h1>This is a heading</h1>
+      					<p>This is a paragraph</p>
+					</div>
+				</div>
+			</div>
     	</div>
 	</body>
 	
