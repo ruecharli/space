@@ -6,30 +6,29 @@
 	</head>
 	<style>
 		body {
+			background: black;
+
+			padding: 0; border: 0; margin: 0;
+		}
+		.container {
+			display: flex; justify-content: center; align-items: center;
+			min-width: 100vw; min-height: 100vh;
+
+			margin: 0 0 0;
+
 			background:
 				linear-gradient(220deg, #150029, transparent 100%),
 				linear-gradient(100deg, #29001C, transparent 100%),
 				linear-gradient(340deg, #290008, transparent 100%);;
 		}
-		.container {
-			width: 65rem;
-			height: 100vh;
-
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-			margin: 0 auto 0;
-		}
 		.smartboard {
-			width: 50em;
-			min-height: 80vh;
+			min-width: 50rem; min-height: 80vh;
+
+			padding: 0;
+			border: 2px solid #F2EDEE;
+			margin: 3rem 0 3rem;
 
 			background: #120000;
-
-			padding: 1em;
-			border: 2px solid #F2EDEE;
-			margin: 0;
 		}
 		h1 {
 			color: #FFF5F7;
