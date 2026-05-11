@@ -1,48 +1,46 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Ruecharli.space</title>
-	</head>
-	
-	<style>
-		body {
-			background: #120000;
-		}
-		.container {
-			display: flex;
-			align-items: center;
-			justify-content: center;
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ruecharli.space</title>
+  </head>
+  <style>
+    html, body {
+      height: 100%;
+    }
+    html {
+      display: table;
+      margin: auto;
+    }
+    body {
+      display: table-cell;
+      vertical-align: middle;
 
-			flex: 1 1 auto;
-    	}
-		.smartboard {
-			aspect-ratio: 16 / 10;
-			max-width: 60%;
-			max-height: 60%;
+      background: #120000;
+    }
+    .smartboard {
+      aspect-ratio: 16 / 10;
+			min-width: 60%;
 			
 			background: #FFF5F7;
 			
 			padding: 1em;
-			border: 2px solid #F2EDEE;
+			border: 5px solid #F2EDEE;
 			margin: 0em;
-		}
-		h1 {
+    }
+    h1 {
 			color: #120000;
 		}
 		p {
 			color: #120000;
 		}
-	</style>
-	
-	<body>
-		<div class="container">
-			<div class="smartboard">
-				<div>
-     				<h1>This is a heading</h1>
-      				<p>This is a paragraph</p>
-				</div>
-			</div>
-    	</div>
-	</body>
-	
+  </style>
+  <body>
+    <div class="smartboard">
+      <div>
+        <h1>This is a heading</h1>
+      	<p>This is a paragraph</p>
+      </div>
+    </div>
+  </body>
 </html>
