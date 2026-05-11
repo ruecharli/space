@@ -5,22 +5,21 @@
     <title>Ruecharli.space</title>
   </head>
   <style>
-    html, body {
-      height: 100%;
-    }
-    html {
-      display: table;
-      margin: auto;
-    }
     body {
-      display: table-cell;
-      vertical-align: middle;
-
       background: #120000;
+    }
+    .container {
+      min-width: 100vh;
+      min-height: 100vh;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .smartboard {
       aspect-ratio: 16 / 10;
 			min-width: 60%;
+      max-width: 80%;
 			
 			background: #FFF5F7;
 			
@@ -36,10 +35,12 @@
 		}
   </style>
   <body>
-    <div class="smartboard">
-      <div>
-        <h1>This is a heading</h1>
-      	<p>This is a paragraph</p>
+    <div class="container">
+      <div class="smartboard">
+        <div>
+          <h1>This is a heading</h1>
+        	<p>This is a paragraph</p>
+        </div>
       </div>
     </div>
   </body>
