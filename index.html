@@ -4,27 +4,31 @@
 		<meta charset="UTF-8">
 		<title>Ruecharli.space</title>
 		<script src="https://iframe.chat/scripts/main.min.js"></script>
-		<script>chattable.initialize({stylesheet: "/chattable.css"});</script>
 	</head>
 	<style>
 		body {
 			background: black;
+
 			padding: 0; border: 0; margin: 0;
 		}
 		.container {
 			display: flex; justify-content: center; align-items: center;
 			min-width: 100vw; min-height: 100vh;
+
 			margin: 0 0 0;
+
 			background:
 				linear-gradient(220deg, #150029, transparent 100%),
 				linear-gradient(100deg, #29001C, transparent 100%),
 				linear-gradient(340deg, #290008, transparent 100%);;
 		}
 		.smartboard {
-			min-width: 50rem; min-height: 80vh;
+			min-width: 60rem; height: 80vh;
+
 			padding: 0;
 			border: 2px solid #F2EDEE;
 			margin: 3rem 0 3rem;
+
 			background: #120000;
 		}
 		h1 {
@@ -37,11 +41,7 @@
 	<body>
 		<div class="container">
 			<div class="smartboard">
-				<div>
-					<h1>This is a heading</h1>
-					<p>This is a paragraph</p>
-					<iframe src="https://iframe.chat/embed?chat=13877689" id="chattable"></iframe>
-				</div>
+				<iframe style="width: 20rem; height: 100%; margin: 0;" src="https://iframe.chat/embed?chat=13877689" id="chattable"></iframe>
 			</div>
 		</div>
 	</body>
