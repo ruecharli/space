@@ -49,7 +49,9 @@ pre:has(>code){
  filter: invert(60%);
 }
 #settingsMenu {
-  color: #F2EDEE;
+    color: #F2EDEE;
+    background-color: #120000;
+    border: solid 1px #F2EDEE;
 }
 #settingsMenu hr {
   border: none;
@@ -64,9 +66,19 @@ pre:has(>code){
   border-bottom: solid 1px #F2EDEE;
 }
 #save {
-  background-color: #120000;
-  color: #F2EDEE;
-  border: solid 1px #F2EDEE;
+    color: #F2EDEE;
+    background-color: #EB2165;
+    border: solid 1px #F2EDEE;
+}
+#account {
+    color: #F2EDEE;
+    background-color: #EB2165;
+    border: solid 1px #F2EDEE;
+}
+#closeSettingsBtn{
+    color: #F2EDEE;
+    background-color: #120000;
+    border: solid 1px #F2EDEE;
 }
 
 
@@ -198,7 +210,16 @@ body {
   color: #EB2165;
 }
 .highlight {
-    background-color: #950E3B;
+    background-color: transparent;
+}
+.allMessages.pm {
+}
+.allMessages.pm:before {
+  content: "[whispers]";
+  font-size: 8pt;
+  font-weight: bolder;
+  opacity: 0.5;
+  color: #EB2165;
 }
 
 
@@ -267,6 +288,9 @@ body {
  top: 2px;
  content: "📌";
 }
+.allMessages.containsOnlyEmojis .emoji {
+    height: 20px;
+}
 
 
 
@@ -292,6 +316,7 @@ body {
 #input:empty::before {
  color: #F2EDEE;
  content: "Message Ruecharli.space";
+ opacity: 0.5;
 }
 #emojiTray, #emojiTrayToggle {
     display: none !important;
