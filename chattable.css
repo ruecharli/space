@@ -1,0 +1,289 @@
+@font-face {
+   font-family: "Mono";
+   src: url('https://xobyte.neocities.org/files/fonts/AnonymousPro-Regular.ttf');
+}
+ @font-face {
+   font-family: "MonoBold";
+   src: url('https://xobyte.neocities.org/files/fonts/AnonymousPro-Bold.ttf');
+}
+ @font-face {
+   font-family: "MonoBoldItalic";
+   src: url('https://xobyte.neocities.org/files/fonts/AnonymousPro-BoldItalic.ttf');
+}
+ @font-face {
+   font-family: "MonoItalic";
+   src: url('https://xobyte.neocities.org/files/fonts/AnonymousPro-Italic.ttf');
+}
+ @keyframes hovering {
+   from {
+     margin-bottom: 3px;
+  }
+   to {
+     margin-bottom: 0;
+  }
+}
+body {
+  background-color: #120000;
+}
+ .allMessages {
+   display: inline-block;
+   background: #120000;
+   border: 1px solid #F2EDEE;
+   font-family: courier, times;
+   font-size: 10pt;
+   border-radius: 0 3px 3px 3px;
+   margin: 5px;
+   line-height: 12pt;
+   position: relative;
+   color: #F2EDEE;
+   width: auto;
+   padding: 5px;
+}
+.allMessages.pm {
+  padding-top: 25px;
+}
+.allMessages.pm:before {
+  content: "//whisper";
+  display: flex;
+  align-items: center;
+  justify-content: flex-en;
+  height: 16px;
+  padding: 5px;
+  width: calc(100% - 10px);
+  line-height: 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 10pt;
+  font-weight: bolder;
+  opacity: 0.5;
+  color: #D65170;
+}
+br {
+   height: 6pt;
+}
+h1 {
+  margin: auto;
+}
+.allMessages:hover:after {
+   content: ' ';
+   position: absolute;
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 100%;
+   border-radius: inherit;
+   background-color: rgba(0, 0, 0, 0.2);
+   pointer-events: none;
+}
+#background {
+   scrollbar-color: #F2EDEE transparent;
+   scrollbar-width: thick;
+}
+ .msgBody {
+   cursor: text;
+}
+#input, #nameEntry {
+   color: #F2EDEE;
+   background-color: #120000;
+   border: none;
+   font-family: courier, times;
+   font-size: 10pt;
+   padding: 5px;
+   width: calc(100% - 10px);
+   border-radius: 0;
+   margin: 0;
+   border-top: solid 1px #F2EDEE;
+}
+#input:placeholder {
+   font-family: courier, times;
+}
+#input:empty::before {
+    color: #F2EDEE;
+   content: "Message Ruecharli.space";
+}
+#input:focus, #nameEntry:focus {
+   outline: dotted 1px #F2EDEE;
+}
+a {
+   font-family: inherit;
+}
+ #timestamp {
+   color: #F2EDEE;
+   font-size: 10pt;
+   font-family: courier, times;
+   margin-top: 0;
+   margin-left: 6px;
+}
+ .senderInfo {
+   text-decoration: underline;
+   text-decoration-color: #F2EDEE;
+   font-family: courier, times;
+}
+ .senderInfo * {
+   display: none;
+   text-decoration: none;
+}
+.badge {
+  display: none;
+}
+.senderInfo:has(.owner), .senderInfo:has(.mod) {
+   font-weight: bold;
+   text-decoration-color: #D65170;
+   text-decoration-style: wavy;
+}
+ .senderInfo:has(.beta) {
+   font-weight: bold;
+   text-decoration-color: #F2EDEE;
+}
+ .senderInfo:after {
+   display: inline-block;
+   content: "";
+   font-family: Verdana;
+   font-style: italic;
+   opacity: 0.75;
+   color: #111;
+   margin-left: 0.5em;
+   text-decoration: none !important;
+}
+ #top_banner {
+   display: none;
+}
+ #settings {
+   filter: invert(90%);
+   opacity: 1;
+}
+ #settings:hover {
+   filter: invert(90%);
+}
+ #textInput {
+   background-color: #00FA11;
+}
+ blockquote {
+   font-style: italic;
+}
+ #loadMore {
+   font-family: courier, times;
+}
+ .pinned {
+   position: sticky;
+   top: 0;
+   z-index: 2;
+   border-radius: 5px;
+   max-height: 15vh;
+   overflow: hidden;
+   cursor: default;
+}
+ .pinned:hover {
+   max-height: none;
+   height: auto;
+   box-shadow: 0px 2px 5px #000;
+   background-color: #00FA11;
+}
+ .pinned::before {
+   content: "\23F7";
+   text-align: center;
+   display: flex;
+   align-items: flex-end;
+   justify-content: center;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   z-index: 2;
+   width: 100%;
+   height: 15vh;
+   max-height: 15vh;
+   animation: 500ms linear infinite alternate hovering;
+}
+ .pinned:hover::before {
+   display: none;
+}
+ .pinned > .allMessages::before {
+   content: " ";
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 15vh;
+   background: linear-gradient(transparent, transparent, #333);
+   opacity: 0.75 
+}
+ .pinned > .allMessages:hover::before {
+   display: none;
+}
+ .pinned:after {
+   display: inline-block;
+   position: absolute;
+   right: 2px;
+   top: 2px;
+   content: "📌";
+}
+#emojiTray {
+    font-family: courier, times;
+  color: #F2EDEE;
+  background-color: #120000;
+  border-color: #F2EDEE;
+}
+#settingsMenu {
+  font-family: courier, times;
+  color: #F2EDEE;
+}
+#settingsMenu hr {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background-color: #F2EDEE;
+}
+#settingsMenu input[type=text] {
+  border: none;
+  background-color: #120000;
+  font-family: courier, times;
+  color: #F2EDEE;
+  border-bottom: solid 1px #F2EDEE;
+}
+#save {
+  background-color: #120000;
+  font-family: courier, times;
+  color: #F2EDEE;
+  border: solid 1px #F2EDEE;
+}
+#is_typing {
+  background-color: #120000;
+  border: none;
+  border-radius: 1px;
+  position: absolute;
+  left: 690px;
+  bottom: 27px;
+  overflow: visible;
+  width: 135px;
+}
+#is_typing:before {
+  color: #F2EDEE;
+  content: "Someone is typing";
+  font-size: 10pt;
+  background-color: transparent;
+}
+#is_typing > span {
+  height: 2px;
+  width: 2px;
+  border-radius: 0;
+  background-color: #F2EDEE;
+}
+#replyBanner {
+    color: #F2EDEE;
+    background-color: #120000;
+    font-size: 10pt;
+}
+#emojiTrayToggle {
+    color: #F2EDEE;
+    background-color: #F2EDEE;
+    height: 60%;
+    width: 2%;
+    top: -80%;
+    right: 0.7%;
+    opacity: 1;
+}
+.allMessages.containsOnlyEmojis .emoji {
+    height: 20px;
+}
