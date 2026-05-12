@@ -1,12 +1,12 @@
 /* THIS SEEMS IMPORTANT */
 
 @keyframes hovering {
- from {
-   margin-bottom: 3px;
- }
- to {
-   margin-bottom: 0;
- }
+    from {
+        margin-bottom: 3px;
+    }
+    to {
+        margin-bottom: 0;
+    }
 }
 
 
@@ -16,20 +16,20 @@
 /* WTF IS THIS */
 
 a {
- font-family: inherit;
+    font-family: inherit;
 }
 br {
- height: 6pt;
+    height: 6pt;
 }
 .badge {
-  display: none;
+    display: none;
 }
 blockquote {
- font-style: italic;
+    font-style: italic;
 }
 pre:has(>code){
-  margin: 5px;
-  background-color: rgba(0, 0, 0, 0.25);
+    margin: 5px;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 
@@ -39,14 +39,14 @@ pre:has(>code){
 /* OUTSIDE MESSAGING ENV */
 
 #top_banner {
- display: none;
+    display: none;
 }
 #settings {
- filter: invert(90%);
- opacity: 1;
+    filter: invert(90%);
+    opacity: 1;
 }
 #settings:hover {
- filter: invert(60%);
+    filter: invert(60%);
 }
 #settingsMenu {
     color: #F2EDEE;
@@ -54,20 +54,20 @@ pre:has(>code){
     border: solid 1px #F2EDEE;
 }
 #settingsMenu hr {
-  border: none;
-  height: 1px;
-  width: 100%;
-  background-color: #F2EDEE;
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: #F2EDEE;
 }
 #settingsMenu input[type=text] {
-  border: none;
-  background-color: #120000;
-  color: #F2EDEE;
-  border-bottom: solid 1px #F2EDEE;
+    border: none;
+    background-color: #120000;
+    color: #F2EDEE;
+    border-bottom: solid 1px #F2EDEE;
 }
 #save {
     color: #F2EDEE;
-    background-color: #EB2165;
+    background-color: #120000;
     border: solid 1px #F2EDEE;
 }
 #account {
@@ -88,11 +88,13 @@ pre:has(>code){
 /* CHAT WINDOW */
 
 body {
-  background: #120000;
-  font-family: Verdana, sans-serif;
+    background: #120000;
+    font-family: Verdana, sans-serif;
 }
 #background {
- background-color: #120000;
+    background-color: #120000;
+    scrollbar-color: #F2EDEE transparent;
+    scrollbar-width: thick;
 }
 
 
@@ -102,11 +104,11 @@ body {
 /* ASSORTED TEXT STUFF */
 
 #timestamp {
- color: #F2EDEE;
- opacity: 0.5;
- text-align: center;
- font-size: 8pt;
- margin: 0;
+    color: #F2EDEE;
+    opacity: 0.5;
+    text-align: center;
+    font-size: 8pt;
+    margin: 0;
 }
 #timestamp:after {
     content: "\2934";
@@ -114,24 +116,24 @@ body {
     font-weight: bold;
 }
 #loadMore {
- font-size: 10pt;
- font-family: Verdana;
+    font-size: 10pt;
+    font-family: Verdana;
 }
 #replyBanner {
-  font-size: 8pt;
-  font-family: Verdana, sans-serif;
-  color: #F2EDEE;
-  background-color: #120000;
+    font-size: 8pt;
+    font-family: Verdana, sans-serif;
+    color: #F2EDEE;
+    background-color: #120000;
 }
 #is_typing {
-  background-color: #120000;
-  border: solid 1px #F2EDEE;
-  height: 15px;
-  border-radius: 8px;
-  left: calc(50% - 15px);
+    background-color: #120000;
+    border: solid 1px #F2EDEE;
+    height: 15px;
+    border-radius: 8px;
+    left: calc(50% - 15px);
 }
 #is_typing > span {
-  background-color: #F2EDEE;
+    background-color: #F2EDEE;
 }
 
 
@@ -144,18 +146,18 @@ body {
     margin: 5px;
 }
 .allMessages {
- display: flex;
- gap: 2.5vh;
- background: linear-gradient(to right, #29001C, #150029, #290008);;
- border: 1px solid #F2EDEE;
- font-size: 8pt;
- border-radius: 0 3px 3px 3px;
- margin: 0;
- line-height: 9pt;
- position: relative;
- color: #F2EDEE;
- width: auto;
- padding: 5px;
+    display: flex;
+    gap: 2.5vh;
+    background: linear-gradient(220deg, #150029, transparent 100%), linear-gradient(100deg, #29001C, transparent 100%), linear-gradient(340deg, #290008, transparent 100%);
+    border: 1px solid #F2EDEE;
+    font-size: 8pt;
+    border-radius: 0 3px 3px 3px;
+    margin: 0;
+    line-height: 9pt;
+    position: relative;
+    color: #F2EDEE;
+    width: auto;
+    padding: 5px;
 }
 .msgWrapper:nth-child(6n) {
     margin-top: 20px;
@@ -168,19 +170,19 @@ body {
     text-align: center;
 }
 .allMessages:hover:after {
- content: ' ';
- position: absolute;
- left: 0;
- top: 0;
- height: 100%;
- width: 100%;
- border-radius: inherit;
- background-color: rgba(0, 0, 0, 0.2);
- pointer-events: none;
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background-color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
 }
 .msgBody {
- text-align: justify;
- cursor: text;
+    text-align: justify;
+    cursor: text;
 }
 
 
@@ -190,24 +192,24 @@ body {
 /* MESSAGE SENDER INFO */
 
 .senderInfo {
- display: block;
- margin: 2px;
- font-family: Verdana;
- font-weight: bold;
- text-align: none;
- min-width: 60px;
- max-width: 30%;
- word-break: break-all;
+    display: block;
+    margin: 2px;
+    font-family: Verdana;
+    font-weight: bold;
+    text-align: none;
+    min-width: 20px;
+    max-width: 30%;
+/*word-break: break-all;*/
 }
 .senderInfo:has(.owner) {
- font-family: Verdana;
- font-weight: bold;
- color: #EB2165;
+    font-family: Verdana;
+    font-weight: bold;
+    color: #EB2165;
 }
 .senderInfo:has(.mod) {
-  font-family: Verdana;
-  font-weight: bold;
-  color: #EB2165;
+    font-family: Verdana;
+    font-weight: bold;
+    color: #EB2165;
 }
 .highlight {
     background-color: transparent;
@@ -215,11 +217,11 @@ body {
 .allMessages.pm {
 }
 .allMessages.pm:before {
-  content: "[whispers]";
-  font-size: 8pt;
-  font-weight: bolder;
-  opacity: 0.5;
-  color: #EB2165;
+    content: "[whispers]";
+    font-size: 8pt;
+    font-weight: bolder;
+    opacity: 0.5;
+    color: #F2EDEE;
 }
 
 
@@ -229,64 +231,64 @@ body {
 /* SPECIAL MESSAGES */
 
 .pinned {
- position: sticky;
- top: 0;
- z-index: 2;
- border-radius: 5px;
- max-height: 15vh;
- overflow: hidden;
- cursor: default;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-radius: 5px;
+    max-height: 15vh;
+    overflow: hidden;
+    cursor: default;
 }
 .pinned:hover {
- max-height: none;
- height: auto;
- background-color: #170209;
+    max-height: none;
+    height: auto;
+    background-color: #170209;
 }
 .pinned::before {
- content: "\23F7";
- text-align: center;
- display: flex;
- align-items: flex-end;
- justify-content: center;
- position: absolute;
- left: 0;
- bottom: 0;
- z-index: 2;
- width: 100%;
- height: 15vh;
- max-height: 15vh;
- animation: 500ms linear infinite alternate hovering;
+    content: "\23F7";
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 15vh;
+    max-height: 15vh;
+    animation: 500ms linear infinite alternate hovering;
 }
 .pinned:hover::before {
- display: none;
+    display: none;
 }
 .pinned > .allMessages {
- box-shadow: none;
+    box-shadow: none;
 }
 .pinned > .allMessages:hover {
- box-shadow: none;
+    box-shadow: none;
 }
 .pinned > .allMessages::before {
- content: " ";
- display: block;
- position: absolute;
- left: 0;
- top: 0;
- width: 100%;
- height: 15vh;
- max-height: 100%;
- background: #170209;
- opacity: 1;
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    max-height: 100%;
+    background: #170209;
+    opacity: 1;
 }
 .pinned > .allMessages:hover::before {
- display: none;
+    display: none;
 }
 .pinned:after {
- display: inline-block;
- position: absolute;
- right: 2px;
- top: 2px;
- content: "📌";
+    display: inline-block;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    content: "📌";
 }
 .allMessages.containsOnlyEmojis .emoji {
     height: 20px;
@@ -299,43 +301,25 @@ body {
 /* MESSAGE INPUT BOX */
 
 #input, #nameEntry {
- color: #F2EDEE;
- background-color: #120000;
- border: none;
- font-family: Verdana;
- font-size: 8pt;
- padding: 5px;
- width: calc(100% - 10px);
- border-radius: 0;
- margin: 0;
- border-top: solid 1px #F2EDEE;
+    color: #F2EDEE;
+    background-color: #120000;
+    border: none;
+    font-family: Verdana;
+    font-size: 8pt;
+    padding: 5px;
+    width: calc(100% - 10px);
+    border-radius: 0;
+    margin: 0;
+    border-top: solid 1px #F2EDEE;
 }
 #input:focus, #nameEntry:focus {
- outline: dotted 1px #F2EDEE;
+    outline: dotted 1px #F2EDEE;
 }
 #input:empty::before {
- color: #F2EDEE;
- content: "Message Ruecharli.space";
- opacity: 0.5;
+    color: #F2EDEE;
+    content: "Message Ruecharli.space";
+    opacity: 0.5;
 }
 #emojiTray, #emojiTrayToggle {
     display: none !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
