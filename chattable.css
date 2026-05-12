@@ -1,118 +1,296 @@
-body, #top_banner, #input {
-    background: #120000;
-    color: #FFF5F7;
-    font-family: console, monospace;
+@font-face {
+    font-family: "Mono";
+    src: url('https://xobyte.neocities.org/files/fonts/AnonymousPro-Regular.ttf');
 }
-#input {
-    border-top: solid 1px #555;
-    border-radius: 0;
+@font-face {
+    font-family: "MonoBold";
+    src: url('https://xobyte.neocities.org/files/fonts/AnonymousPro-Bold.ttf');
 }
-#input:empty:before {
-    color: #555;
-    content: "type a message...";
+@font-face {
+    font-family: "MonoBoldItalic";
+    src: url('https://xobyte.neocities.org/files/fonts/AnonymousPro-BoldItalic.ttf');
 }
-#settings {
-    filter: invert(100%);
+@font-face {
+    font-family: "MonoItalic";
+    src: url('https://xobyte.neocities.org/files/fonts/AnonymousPro-Italic.ttf');
 }
-.msgWrapper {
-    display: block;
+@keyframes hovering {
+    from {
+        margin-bottom: 3px;
+    }
+    to {
+        margin-bottom: 0;
+    }
+}
+
+
+#replyBanner {
+    color: #F2EDEE;
+    background-color: #120000;
+    font-size: 10pt;
+}
+#emojiTrayToggle {
+    color: #F2EDEE;
+    height: 75%;
+    aspect-ratio: 1;
+    top: 12.5%;
+    opacity: 1;
+}
+.allMessages.containsOnlyEmojis .emoji {
+    height: 20px;
+}
+
+
+
+body {
+    background-color: #120000;
 }
 .allMessages {
+    display: inline-block;
+    background: #120000;
+    border: 1px solid #F2EDEE;
+    font-family: serif;
+    font-size: 10pt;
+    border-radius: 0 3px 3px 3px;
+    margin: 5px;
+    line-height: 12pt;
+    position: relative;
+    color: #F2EDEE;
+    width: auto;
+    padding: 10px;
+}
+.allMessages.pm {
+    padding-top: 26px;
+}
+.allMessages.pm:before {
+    content: "[Classified]";
     display: flex;
-}
-.senderInfo, .msgBody {
-    font-weight: lighter;
-    display: inline;
-}
-.senderInfo {
-    margin-right: 10px !important;
-    font-weight: bold;
-}
-.senderInfo:before {
-    content: "<";
-}
-.senderInfo:after {
-    content: ">"
-}
-.verified_icon {
-    display: inline !important;
-}
-.allMessages[uid^='0'] { color: #FF5733; } 
-.allMessages[uid^='1'] { color: #FFC107; } 
-.allMessages[uid^='2'] { color: #4CAF50; } 
-.allMessages[uid^='3'] { color: #2196F3; } 
-.allMessages[uid^='4'] { color: #9C27B0; } 
-.allMessages[uid^='5'] { color: #FF9800; } 
-.allMessages[uid^='6'] { color: #009688; } 
-.allMessages[uid^='7'] { color: #E91E63; } 
-.allMessages[uid^='8'] { color: #607D8B; } 
-.allMessages[uid^='9'] { color: #795548; } 
-.allMessages[uid^='a'] { color: #F4BB33; } 
-.allMessages[uid^='b'] { color: #FF4081; } 
-.allMessages[uid^='c'] { color: #00BCD4; } 
-.allMessages[uid^='d'] { color: #8BC34A; } 
-.allMessages[uid^='e'] { color: #673AB7; } 
-.allMessages[uid^='f'] { color: #FF5722; } 
-.allMessages[uid^='g'] { color: #4CAF50; } 
-.allMessages[uid^='h'] { color: #3F51B5; } 
-.allMessages[uid^='i'] { color: #CDDC39; } 
-.allMessages[uid^='j'] { color: #FFEB3B; } 
-.allMessages[uid^='k'] { color: #0097A7; } 
-.allMessages[uid^='l'] { color: #D81B60; } 
-.allMessages[uid^='m'] { color: #4DB6AC; } 
-.allMessages[uid^='n'] { color: #7B1FA2; } 
-.allMessages[uid^='o'] { color: #FBC02D; } 
-.allMessages[uid^='p'] { color: #0288D1; } 
-.allMessages[uid^='q'] { color: #689F38; } 
-.allMessages[uid^='r'] { color: #D32F2F; } 
-.allMessages[uid^='s'] { color: #1976D2; } 
-.allMessages[uid^='t'] { color: #388E3C; } 
-.allMessages[uid^='u'] { color: #F06292; } 
-.allMessages[uid^='v'] { color: #455A64; } 
-.allMessages[uid^='w'] { color: #F57C00; } 
-.allMessages[uid^='x'] { color: #26A69A; } 
-.allMessages[uid^='y'] { color: #AB47BC; } 
-.allMessages[uid^='z'] { color: #FFCA28; } 
-.allMessages[uid^='A'] { color: #FF6F61; } 
-.allMessages[uid^='B'] { color: #FFD700; } 
-.allMessages[uid^='C'] { color: #00E676; } 
-.allMessages[uid^='D'] { color: #0288D1; } 
-.allMessages[uid^='E'] { color: #8E24AA; } 
-.allMessages[uid^='F'] { color: #FF8A65; } 
-.allMessages[uid^='G'] { color: #26C6DA; } 
-.allMessages[uid^='H'] { color: #AD1457; } 
-.allMessages[uid^='I'] { color: #AEEA00; } 
-.allMessages[uid^='J'] { color: #FFAB00; } 
-.allMessages[uid^='K'] { color: #00ACC1; } 
-.allMessages[uid^='L'] { color: #EC407A; } 
-.allMessages[uid^='M'] { color: #26A69A; } 
-.allMessages[uid^='N'] { color: #5E35B1; } 
-.allMessages[uid^='O'] { color: #FFA726; } 
-.allMessages[uid^='P'] { color: #039BE5; } 
-.allMessages[uid^='Q'] { color: #7CB342; } 
-.allMessages[uid^='R'] { color: #C62828; } 
-.allMessages[uid^='S'] { color: #1565C0; } 
-.allMessages[uid^='T'] { color: #2E7D32; } 
-.allMessages[uid^='U'] { color: #F06292; } 
-.allMessages[uid^='V'] { color: #37474F; } 
-.allMessages[uid^='W'] { color: #EF6C00; } 
-.allMessages[uid^='X'] { color: #00897B; } 
-.allMessages[uid^='Y'] { color: #8E24AA; } 
-.allMessages[uid^='Z'] { color: #FFB300; } 
-.sent {
-    color: #FF9800 !important;
+    align-items: center;
+    justify-content: flex-end;
+    height: 16px;
+    padding: 5px;
+    width: calc(100% - 10px);
+    line-height: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 10pt;
     font-weight: bolder;
+    opacity: 0.5;
+    color: #F2EDEE;
+}
+br {
+    height: 6pt;
+}
+h1 {
+    margin: auto;
+}
+.allMessages:hover:after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+    background-color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+#background {
+    scrollbar-color: #F2EDEE transparent;
+    scrollbar-width: thin;
+}
+.msgBody {
+    cursor: text;
+}
+#input, #nameEntry {
+    color: #F2EDEE;
+    background-color: #120000;
+    border: none;
+    font-family: serif;
+    font-size: 10pt;
+    padding: 5px;
+    width: calc(100% - 10px);
+    border-radius: 0;
+    margin: 0;
+    border-top: solid 1px #F2EDEE;
+}
+#input::placeholder {
+    color: #F2EDEE;
+    font-family: serif;
+}
+#input:empty::before {
+    color: #F2EDEE;
+    opacity: 0.7;
+    content: "Message Ruecharli.space";
+}
+#input:focus, #nameEntry:focus {
+    outline: dotted 1px #F2EDEE;
+}
+a {
+    font-family: inherit;
 }
 #timestamp {
+    font-family: serif;
+    color: #F2EDEE;
+    opacity: 0.7;
+    font-size: 8pt;
+    padding-left: 6pt;
+    margin-top: 0;
+}
+.senderInfo {
+    text-decoration: underline;
+    text-decoration-color: #F2EDEE;
+    font-family: courier, times;
+    font-style: bold;
+}
+.senderInfo * {
+    display: inline-block;
+    text-decoration: none;
+}
+.badge {
     display: none;
 }
-.allMessages:after {
-    content: attr(time);
-    color: #555;
-    float: right;
-    margin-left: 10px;
-    font-size: 8pt;
+.senderInfo:has(.owner), .senderInfo:has(.mod) {
+    font-weight: bold;
+    text-decoration-color: #BD0F56;
+    text-decoration-style: wavy;
 }
-#emojiTray, #emojiTrayToggle {
-    display: none !important;
+.senderInfo:has(.beta) {
+    font-weight: bold;
+    text-decoration-color: #F2EDEE;
+}
+.senderInfo:after {
+    display: inline-block;
+    content: "";
+    font-family: Verdana;
+    font-style: italic;
+    opacity: 0.75;
+    color: #111;
+    margin-left: 0.5em;
+    text-decoration: none !important;
+}
+#top_banner {
+    display: none;
+}
+#settings {
+    filter: invert(90%);
+    opacity: 1;
+}
+#settings:hover {
+    filter: invert(60%);
+}
+#textInput {
+    background-color: #F2EDEE;
+}
+blockquote {
+    font-style: italic;
+}
+#loadMore {
+    font-family: Verdana;
+}
+.pinned {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-radius: 5px;
+    max-height: 15vh;
+    overflow: hidden;
+    cursor: default;
+}
+.pinned:hover {
+    max-height: none;
+    height: auto;
+    box-shadow: 0px 2px 5px #000;
+    background-color: #120000;
+}
+.pinned::before {
+    content: "\23F7";
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 15vh;
+    max-height: 15vh;
+    animation: 500ms linear infinite alternate hovering;
+}
+.pinned:hover::before {
+    display: none;
+}
+.pinned > .allMessages::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    background: linear-gradient(transparent, transparent, #333);
+    opacity: 0.75 
+}
+.pinned > .allMessages:hover::before {
+    display: none;
+}
+.pinned:after {
+    display: inline-block;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    content: "📌";
+}
+#emojiTray {
+    background-color: #120000;
+    border-color: #F2EDEE;
+}
+#settingsMenu {
+    font-family: serif;
+    color: #F2EDEE;
+}
+#settingsMenu hr {
+    border: none;
+    height: 1px;
+    width: 100%;
+    background-color: #120000;
+}
+#settingsMenu input[type=text] {
+    border: none;
+    background-color: #120000;
+    font-family: serif;
+    color: #F2EDEE;
+    border-bottom: solid 1px #F2EDEE;
+}
+#save {
+    background-color: #120000;
+    font-family: serif;
+    color: #F2EDEE;
+    border: solid 1px #F2EDEE;
+}
+#is_typing {
+    background-color: transparent;
+    border: none;
+    border-radius: 1px;
+    position: absolute;
+    right: 7px;
+    bottom: 27px;
+    overflow: visible;
+    width: auto;
+    justify-content: flex-end;
+}
+#is_typing:before {
+    font-family: serif;
+    color: #F2EDEE;
+    content: "Someone is typing";
+    font-size: 8pt;
+    background-color: transparent;
+}
+#is_typing > span {
+    height: 2px;
+    width: 2px;
+    border-radius: 0;
+    background-color: #F2EDEE;
 }
