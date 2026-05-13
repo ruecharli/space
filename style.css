@@ -31,7 +31,7 @@ body {
     linear-gradient(340deg, #290008, transparent 100%);
 }
 .smartboard {
-  height: 60vh;
+  height: 75vh;
   aspect-ratio: 16 / 10;
   z-index: 1;
 
