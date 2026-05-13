@@ -51,34 +51,34 @@ pre:has(>code){
 #settingsMenu {
     color: #F2EDEE;
     background-color: #120000;
-    border: solid 1px #F2EDEE;
+    border: solid 1px #300000;
 }
 #settingsMenu hr {
     border: none;
     height: 1px;
     width: 100%;
-    background-color: #F2EDEE;
+    background-color: #B8A5A5;
 }
 #settingsMenu input[type=text] {
     border: none;
     background-color: #120000;
     color: #F2EDEE;
-    border-bottom: solid 1px #F2EDEE;
+    border: solid 1px #B8A5A5;
 }
 #save {
     color: #F2EDEE;
     background-color: #120000;
-    border: solid 1px #F2EDEE;
+    border: solid 1px #B8A5A5;
 }
 #account {
     color: #F2EDEE;
     background-color: #EB2165;
-    border: solid 1px #F2EDEE;
+    border: solid 1px #B8A5A5;
 }
 #closeSettingsBtn{
     color: #F2EDEE;
     background-color: #120000;
-    border: solid 1px #F2EDEE;
+    border: solid 1px #B8A5A5;
 }
 
 
@@ -93,7 +93,7 @@ body {
 }
 #background {
     background-color: #120000;
-    scrollbar-color: #F2EDEE transparent;
+    scrollbar-color: #B8A5A5 transparent;
     scrollbar-width: thick;
 }
 
@@ -104,8 +104,7 @@ body {
 /* ASSORTED TEXT STUFF */
 
 #timestamp {
-    color: #F2EDEE;
-    opacity: 0.5;
+    color: #9C8686;
     text-align: center;
     font-size: 8pt;
     margin: 0;
@@ -127,13 +126,13 @@ body {
 }
 #is_typing {
     background-color: #120000;
-    border: solid 1px #F2EDEE;
+    border: solid 1px #B8A5A5;
     height: 15px;
     border-radius: 8px;
     left: calc(50% - 15px);
 }
 #is_typing > span {
-    background-color: #F2EDEE;
+    background-color: #B8A5A5;
 }
 
 
@@ -149,7 +148,7 @@ body {
     display: flex;
     gap: 2.5vh;
     background: linear-gradient(220deg, #150029, transparent 100%), linear-gradient(100deg, #29001C, transparent 100%), linear-gradient(340deg, #290008, transparent 100%);
-    border: 1px solid #F2EDEE;
+    border: 1px solid #5C365A;
     font-size: 8pt;
     border-radius: 0 3px 3px 3px;
     margin: 0;
@@ -181,8 +180,9 @@ body {
     pointer-events: none;
 }
 .msgBody {
-    text-align: justify;
-    cursor: text;
+    text-align: left;
+    /*cursor: text;*/
+    max-width: ;
 }
 
 
@@ -197,19 +197,18 @@ body {
     font-family: Verdana;
     font-weight: bold;
     text-align: none;
-    min-width: 20px;
+    /*min-width: 20px;*/
     max-width: 30%;
-/*word-break: break-all;*/
 }
 .senderInfo:has(.owner) {
     font-family: Verdana;
     font-weight: bold;
-    color: #EB2165;
+    color: #B85FA9;
 }
 .senderInfo:has(.mod) {
     font-family: Verdana;
     font-weight: bold;
-    color: #EB2165;
+    color: #B85FA9;
 }
 .highlight {
     background-color: transparent;
@@ -217,11 +216,10 @@ body {
 .allMessages.pm {
 }
 .allMessages.pm:before {
-    content: "[whispers]";
+    content: "[whisper]";
     font-size: 8pt;
     font-weight: bolder;
-    opacity: 0.5;
-    color: #F2EDEE;
+    color: #926A72;
 }
 
 
@@ -310,15 +308,14 @@ body {
     width: calc(100% - 10px);
     border-radius: 0;
     margin: 0;
-    border-top: solid 1px #F2EDEE;
+    border-top: solid 1px #B8A5A5;
 }
 #input:focus, #nameEntry:focus {
-    outline: dotted 1px #F2EDEE;
+    outline: dotted 1px #B8A5A5;
 }
 #input:empty::before {
-    color: #F2EDEE;
+    color: #9C8686;
     content: "Message Ruecharli.space";
-    opacity: 0.5;
 }
 #emojiTray, #emojiTrayToggle {
     display: none !important;
