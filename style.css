@@ -49,6 +49,7 @@ body {
 }
 .mainwindowcontent {
   width: 58%; height: 100%; border: 1px solid #F2EDEE; margin-left: 1%; float: left;
+  overflow: auto;
 }
 .chatdiv {
   width: 40%; height: 100%; border-left: 1px solid #F2EDEE; float: right;
